@@ -94,6 +94,7 @@ html, body {
 }
 
 .page1 h1{
+    display: flex;
     font-size: 5vw;
     font-weight: 300;
     font-family: PP mori;
@@ -107,6 +108,7 @@ html, body {
     font-weight: 300;
     transform-origin: left;
     margin-left: 26vw;
+    color: white;
    
 }
 
@@ -170,6 +172,39 @@ html, body {
     margin-top: 20px;
     cursor: pointer;
 }
+.page1 .pur :nth-child(1) {
+	animation-delay: 2s;
+}
+.page1 .pur :nth-child(1) span {
+	animation-delay: 5.5s;
+}
+.page1 .pur span {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 0;
+	left: 0;
+	top: 0;
+	background-color: rgb(255, 255, 255);
+	animation: revealing 1s ease forwards;
+	animation-delay: .5s;
+}
+@keyframes text_revealing {
+	100% {
+		color: rgb(0, 0, 0);
+	}
+}
+@keyframes revealing {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		left: 100%;
+		width: 0%;
+	}
+}
+
 
 .page3{
     min-height: 100vh;

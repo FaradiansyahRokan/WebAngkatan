@@ -33,12 +33,19 @@ init()
 //     customCursor.style.top = event.clientY + "px";
 // });
 
-gsap.from(".page1 h1,.page1 h2", {
-    y: 10,
-    rotate: 10,
+gsap.from(".page1 h1", {
+    x: 100,
+    rotate: 0,
     opacity: 0,
     delay: 0.3,
     duration: 0.7
+})
+gsap.from(".page1 h2", {
+    x: -100,
+    rotate: 0,
+    opacity: 0,
+    delay: 1.7,
+    duration: 1.0
 })
 
 gsap.registerPlugin(ScrollTrigger);
@@ -53,6 +60,26 @@ gsap.to(".rokan", {
         scrub: true
     }
 });
+
+var tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page2 h1",
+        scroller: ".main",
+        // markers:true,
+        start: "top 27%",
+        end: "top 0",
+        scrub: 3
+    }
+})
+tl.to(".page2 h1", {
+    y: 60,
+}, "anim")
+tl.to(".page2 h2", {
+    x: 50,
+}, "anim")
+tl.to(".page2-right", {
+    y: -70,
+}, "anim")
 
 
 var tl = gsap.timeline({
@@ -142,5 +169,5 @@ gsap.to('.char', {
     y: 0,
     stagger: 0.05,
     delay: 0.2,
-    duration: .1
+    duration: .7
 })
