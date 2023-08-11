@@ -99,14 +99,15 @@ html, body {
     font-family: PP mori;
     margin-left: 6vw;
     transform-origin: left;
-    backdrop-filter: blur(5px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
 }
 .page1 h2{
     font-size: 3vw;
     font-weight: 300;
     transform-origin: left;
-    backdrop-filter: blur(5px);
     margin-left: 26vw;
+   
 }
 
 .page1 img{
