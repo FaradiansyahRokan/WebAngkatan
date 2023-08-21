@@ -147,28 +147,28 @@ gsap.to('#finish', {
     },
   })
   
-  var slide1h1 = document.querySelectorAll('#page7 .slide1h1 h1');
+  var slide1h1 = document.querySelectorAll('#page8 .slide1h1 h1');
 slide1h1.forEach(function (elem) {
   gsap.to(elem, {
     transform: 'translateX(-96%)',
     ease: 'linear',
     duration: 4,
     scrollTrigger: {
-      trigger: '#page7',
+      trigger: '#page8',
       scroller: '.main',
       // markers: true,
       scrub: 3
     }
   })
 })
-var slide2h1 = document.querySelectorAll('#page7 .slide2h1 h1');
+var slide2h1 = document.querySelectorAll('#page8 .slide2h1 h1');
 slide2h1.forEach(function (elem) {
   gsap.to(elem, {
     transform: 'translateX(0%)',
     ease: 'linear',
     duration: 4,
     scrollTrigger: {
-      trigger: '#page7',
+      trigger: '#page8',
       scroller: '.main',
       // markers: true,
       scrub: 3
