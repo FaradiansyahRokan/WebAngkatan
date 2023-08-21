@@ -72,13 +72,13 @@ var tl = gsap.timeline({
     }
 })
 tl.to(".page2 h1", {
-    y: 60,
+    y: -40,
 }, "anim")
 tl.to(".page2 h2", {
     x: 50,
 }, "anim")
 tl.to(".page2-right", {
-    y: -70,
+    y: 40,
 }, "anim")
 
 
@@ -131,6 +131,50 @@ tl3.to(".main",{
     backgroundColor:"#0F0D0D"
 })
 
+gsap.to('#finish', {
+    scrollTrigger: {
+      trigger: '#finish',
+      scroller: '.main',
+      // markers: true,
+      start: 'top 35%',
+    },
+    opacity: 1,
+    duration:1,
+    onStart: function () {
+      $(document).ready(function () {
+        $('#finish h1').textillate({ in: { effect: 'fadeInUp' } });
+      })
+    },
+  })
+  
+  var slide1h1 = document.querySelectorAll('#page7 .slide1h1 h1');
+slide1h1.forEach(function (elem) {
+  gsap.to(elem, {
+    transform: 'translateX(-96%)',
+    ease: 'linear',
+    duration: 4,
+    scrollTrigger: {
+      trigger: '#page7',
+      scroller: '.main',
+      // markers: true,
+      scrub: 3
+    }
+  })
+})
+var slide2h1 = document.querySelectorAll('#page7 .slide2h1 h1');
+slide2h1.forEach(function (elem) {
+  gsap.to(elem, {
+    transform: 'translateX(0%)',
+    ease: 'linear',
+    duration: 4,
+    scrollTrigger: {
+      trigger: '#page7',
+      scroller: '.main',
+      // markers: true,
+      scrub: 3
+    }
+  })
+})
 
 var boxes = document.querySelectorAll(".box")
 boxes.forEach(function(elem){
