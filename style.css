@@ -93,7 +93,6 @@ html, body {
     /* background-color: blue; */
     display: flex;
     align-items: center;
-    
 }
 #prt2 #menu{
     width: 2vw;
@@ -104,6 +103,7 @@ html, body {
     justify-content: space-between;
     cursor: pointer;
     flex-direction: column;
+    
     /* background-color: red; */
 }
 #menu .line{
@@ -133,6 +133,7 @@ html, body {
     transform: translateY(-100%);
     border-top: 1px solid #000;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.8s;
+    
 }
 #topmenu h1{
     font-size: 7.5vw;
@@ -141,22 +142,8 @@ html, body {
     letter-spacing: 2vw;
     text-transform: uppercase;
 }
-#topmenu .more{
-    font-size: 2.05vw;
-    text-transform: uppercase;
-    margin-right: 100px;
-    margin-top: 10px;
-    letter-spacing: 2px;
-    word-spacing: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
-    color: #232025;
-}
-#topmenu .more h2{
-    color: #232025;
-    cursor: pointer;
+#topmenu h1 span {
+    color: #2b2b2b;
 }
 #opt{
     height: 60vh;

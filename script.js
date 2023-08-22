@@ -25,7 +25,8 @@ menu.addEventListener('click', () => {
     document.getElementById('nav').style.color = `#cecece`;
     flag = 0;
   }
-})
+}) 
+
 
 function init() {
     gsap.registerPlugin(ScrollTrigger);
@@ -255,3 +256,25 @@ gsap.to('.char', {
     delay: 0.2,
     duration: .7
 })
+var textElement = document.getElementById("more");
+
+// Daftar teks yang akan ditampilkan secara bergantian
+var texts = ["RPL", "TKJ"];
+
+// Indeks saat ini dari teks yang ditampilkan
+var currentIndex = 1;
+
+// Fungsi untuk mengubah teks dengan animasi
+function changeText() {
+  // Fade out animasi
+  gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
+    // Ubah teks dan fade in animasi
+    textElement.textContent = texts[currentIndex];
+    gsap.to(textElement, { opacity: 1, duration: 0.5 });
+    
+    currentIndex = (currentIndex + 1) % texts.length;
+  }});
+}
+
+// Tambahkan event listener ke elemen teks
+textElement.addEventListener("click", changeText);
