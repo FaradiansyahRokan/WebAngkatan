@@ -89,14 +89,6 @@ html, body {
 #nav a:nth-child(1){
     border-bottom: 1.5px solid #fff;
 }
-#prt2 h2{
-    font-size: 1.05vw;
-    text-transform: uppercase;
-    margin-right: 55px;
-    letter-spacing: 2px;
-    word-spacing: 6px;
-    cursor: pointer;
-}
 #nav #prt2{
     /* background-color: blue; */
     display: flex;
@@ -141,7 +133,6 @@ html, body {
     transform: translateY(-100%);
     border-top: 1px solid #000;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.8s;
-    
 }
 #topmenu h1{
     font-size: 7.5vw;
@@ -149,10 +140,26 @@ html, body {
     margin-left: 4.8vw;
     letter-spacing: 2vw;
     text-transform: uppercase;
-
+}
+#topmenu .more{
+    font-size: 2.05vw;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: #232025;
+}
+#topmenu .more h2{
+    color: #232025;
+    cursor: pointer;
 }
 #opt{
-    height: 50vh;
+    height: 60vh;
     width: 45vw;
     margin-left: 5.5vw;
     display: flex;
