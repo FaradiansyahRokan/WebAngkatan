@@ -256,25 +256,71 @@ gsap.to('.char', {
     delay: 0.2,
     duration: .7
 })
-var textElement = document.getElementById("more");
 
-// Daftar teks yang akan ditampilkan secara bergantian
-var texts = ["RPL", "TKJ"];
+// var flag2 = 0
+// var more = document.querySelector('#more')
+// more.addEventListener('click', () => {
+//     if (flag2 === 0) {
+//       document.getElementById('topmenu2').style.transform = `translateX(0)`
+//       document.getElementById('nav').style.color = `#232025`;
+//       flag2 = 1;
+//     }
+//     else {
+//       document.getElementById('topmenu2').style.transform = `translateX(-100%)`
+//       document.getElementById('nav').style.color = `#cecece`;
+//       flag2 = 0;
+//     }
+//   }) 
 
-// Indeks saat ini dari teks yang ditampilkan
-var currentIndex = 1;
+//   var textElement = document.getElementById("more");
 
-// Fungsi untuk mengubah teks dengan animasi
-function changeText() {
-  // Fade out animasi
-  gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
-    // Ubah teks dan fade in animasi
-    textElement.textContent = texts[currentIndex];
-    gsap.to(textElement, { opacity: 1, duration: 0.5 });
+// // Daftar teks yang akan ditampilkan secara bergantian
+// var texts = ["RPL", "TKJ"];
+
+// // Indeks saat ini dari teks yang ditampilkan
+// var currentIndex = 1;
+
+// // Fungsi untuk mengubah teks dengan animasi
+// function changeText() {
+//   // Fade out animasi
+//   gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
+//     // Ubah teks dan fade in animasi
+//     textElement.textContent = texts[currentIndex];
+//     gsap.to(textElement, { opacity: 1, duration: 0.5 });
     
-    currentIndex = (currentIndex + 1) % texts.length;
-  }});
-}
+//     currentIndex = (currentIndex + 1) % texts.length;
+//   }});
+// }
 
-// Tambahkan event listener ke elemen teks
-textElement.addEventListener("click", changeText);
+// // Tambahkan event listener ke elemen teks
+// textElement.addEventListener("click", changeText);
+  
+
+var flag2 = 0;
+    var more = document.querySelector('#more');
+    more.addEventListener('click', () => {
+      if (flag2 === 0) {
+        document.getElementById('opt2').style.transform = `translateX(0)`;
+        document.getElementById('nav').style.color = `#232025`;
+        flag2 = 1;
+      } else {
+        document.getElementById('opt2').style.transform = `translateX(-100%)`;
+        document.getElementById('nav').style.color = `#cecece`;
+        flag2 = 0;
+      }
+    });
+
+    var textElement = document.getElementById("more");
+    var texts = ["RPL", "TKJ"];
+    var currentIndex = 1;
+
+    function changeText() {
+      gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
+        textElement.textContent = texts[currentIndex];
+        gsap.to(textElement, { opacity: 1, duration: 0.5 });
+
+        currentIndex = (currentIndex + 1) % texts.length;
+      }});
+    }
+
+    textElement.addEventListener("click", changeText);

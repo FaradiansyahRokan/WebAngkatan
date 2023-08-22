@@ -135,15 +135,41 @@ html, body {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.8s;
     
 }
+#topmenu2{
+    background-color: #cecece;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 11;
+    color: #2b2b2b;
+    transform: translateX(-100%);
+    border-top: 1px solid #000;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.8s;
+    
+}
+
 #topmenu h1{
     font-size: 7.5vw;
     margin-top: 10.5vh;
     margin-left: 4.8vw;
     letter-spacing: 2vw;
+    z-index: 120;
     text-transform: uppercase;
 }
 #topmenu h1 span {
     color: #2b2b2b;
+    z-index: 12;
+    cursor: pointer;
+}
+#opt{
+    height: 60vh;
+    width: 45vw;
+    margin-left: 5.5vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+    /* background-color: azure; */
 }
 #opt{
     height: 60vh;
