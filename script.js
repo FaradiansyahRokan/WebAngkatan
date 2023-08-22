@@ -5,6 +5,7 @@ var line2 = document.getElementById('line2');
 menu.addEventListener('click', () => {
   if (flag === 0) {
     document.getElementById('topmenu').style.transform = `translateY(0)`
+    // document.getElementById('topmenu2').style.transform = `translateX(0)`
     line1.style.backgroundColor = `#232025`;
     line2.style.backgroundColor = `#232025`;
     line1.style.transform = `rotate(40deg)`;
@@ -16,6 +17,7 @@ menu.addEventListener('click', () => {
   }
   else {
     document.getElementById('topmenu').style.transform = `translateY(-100%)`
+    document.getElementById('topmenu2').style.transform = `translateX(-100%)`
     line1.style.backgroundColor = `#cecece`;
     line2.style.backgroundColor = `#cecece`;
     line1.style.transform = `rotate(00deg)`;
