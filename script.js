@@ -300,27 +300,36 @@ var flag2 = 0;
     var more = document.querySelector('#more');
     more.addEventListener('click', () => {
       if (flag2 === 0) {
-        document.getElementById('opt2').style.transform = `translateX(0)`;
-        document.getElementById('nav').style.color = `#232025`;
+        document.getElementById('topmenu2').style.transform = `translateX(0%)`;
         flag2 = 1;
       } else {
-        document.getElementById('opt2').style.transform = `translateX(-100%)`;
-        document.getElementById('nav').style.color = `#cecece`;
+        document.getElementById('topmenu2').style.transform = `translateX(-100%)`;
         flag2 = 0;
       }
     });
+var flag3 = 0;
+    var back = document.querySelector('#back');
+    back.addEventListener('click', () => {
+      if (flag3 === 0) {
+        document.getElementById('topmenu2').style.transform = `translateX(-100%)`;
+        flag3 = 1;
+      } else {
+        document.getElementById('topmenu2').style.transform = `translateX(0%)`;
+        flag3 = 0;
+      }
+    });
 
-    var textElement = document.getElementById("more");
-    var texts = ["RPL", "TKJ"];
-    var currentIndex = 1;
+    // var textElement = document.getElementById("more");
+    // var texts = ["RPL", "TKJ"];
+    // var currentIndex = 1;
 
-    function changeText() {
-      gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
-        textElement.textContent = texts[currentIndex];
-        gsap.to(textElement, { opacity: 1, duration: 0.5 });
+    // function changeText() {
+    //   gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
+    //     textElement.textContent = texts[currentIndex];
+    //     gsap.to(textElement, { opacity: 1, duration: 0.5 });
 
-        currentIndex = (currentIndex + 1) % texts.length;
-      }});
-    }
+    //     currentIndex = (currentIndex + 1) % texts.length;
+    //   }});
+    // }
 
-    textElement.addEventListener("click", changeText);
+    // textElement.addEventListener("click", changeText);

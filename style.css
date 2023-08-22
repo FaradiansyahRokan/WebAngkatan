@@ -156,7 +156,20 @@ html, body {
     z-index: 120;
     text-transform: uppercase;
 }
+#topmenu2 h1{
+    font-size: 7.5vw;
+    margin-top: 10.5vh;
+    margin-left: 4.8vw;
+    letter-spacing: 2vw;
+    z-index: 120;
+    text-transform: uppercase;
+}
 #topmenu h1 span {
+    color: #2b2b2b;
+    z-index: 12;
+    cursor: pointer;
+}
+#topmenu2 h1 span {
     color: #2b2b2b;
     z-index: 12;
     cursor: pointer;
