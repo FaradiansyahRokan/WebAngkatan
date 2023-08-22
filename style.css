@@ -556,3 +556,25 @@ footer{
     color: transparent;
     -webkit-text-stroke: 1px #adadad;
 }
+#page9{
+    position: relative;
+    background-color: #232025;
+}
+#part1{
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    perspective: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page9 #part1 h1{
+    font-size: 55px;
+    opacity: 0;
+    transform: rotateX(270deg);
+    transform-origin: left bottom;
+}
+#page9 #part1 h1 span{
+    font-family: 'dancing script';
+}

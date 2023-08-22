@@ -258,46 +258,20 @@ gsap.to('.char', {
     delay: 0.2,
     duration: .7
 })
-
-// var flag2 = 0
-// var more = document.querySelector('#more')
-// more.addEventListener('click', () => {
-//     if (flag2 === 0) {
-//       document.getElementById('topmenu2').style.transform = `translateX(0)`
-//       document.getElementById('nav').style.color = `#232025`;
-//       flag2 = 1;
-//     }
-//     else {
-//       document.getElementById('topmenu2').style.transform = `translateX(-100%)`
-//       document.getElementById('nav').style.color = `#cecece`;
-//       flag2 = 0;
-//     }
-//   }) 
-
-//   var textElement = document.getElementById("more");
-
-// // Daftar teks yang akan ditampilkan secara bergantian
-// var texts = ["RPL", "TKJ"];
-
-// // Indeks saat ini dari teks yang ditampilkan
-// var currentIndex = 1;
-
-// // Fungsi untuk mengubah teks dengan animasi
-// function changeText() {
-//   // Fade out animasi
-//   gsap.to(textElement, { opacity: 0, duration: 0.5, onComplete: function() {
-//     // Ubah teks dan fade in animasi
-//     textElement.textContent = texts[currentIndex];
-//     gsap.to(textElement, { opacity: 1, duration: 0.5 });
-    
-//     currentIndex = (currentIndex + 1) % texts.length;
-//   }});
-// }
-
-// // Tambahkan event listener ke elemen teks
-// textElement.addEventListener("click", changeText);
+gsap.to('#page9 #part1 h1', {
+    duration: 1,
+    opacity: 1,
+    rotateX: 0,
+    scrollTrigger: {
+      trigger: '#page9 #part1 h1',
+      scroller: '.main',
+      scrub: 2,
+      end: 'bottom 85%',
+      // markers:true,
+      start: 'top 60%',
+    },
+  })
   
-
 var flag2 = 0;
     var more = document.querySelector('#more');
     more.addEventListener('click', () => {
@@ -335,3 +309,4 @@ var flag3 = 0;
     // }
 
     // textElement.addEventListener("click", changeText);
+
